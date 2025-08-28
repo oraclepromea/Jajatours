@@ -10,6 +10,8 @@
     --transition: all 0.3s ease;
 }
 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -323,11 +325,9 @@ p {
     box-shadow: 0 5px 15px var(--shadow);
     transition: var(--transition);
     border: 1px solid rgba(107,191,89,0.1);
-}
-
-.tour-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px var (--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .tour-image {
@@ -347,6 +347,9 @@ p {
 
 .tour-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .tour-content h3 {
@@ -363,9 +366,16 @@ p {
     font-weight: 500;
 }
 
+.tour-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
 .whatsapp-btn {
     display: inline-block;
-    margin-top: 1rem;
+    margin: 0 auto;
     padding: 0.8rem 1.5rem;
     background: #25d366;
     color: #fff;
@@ -642,6 +652,33 @@ p {
 .social-btn:focus {
     outline: 2px solid var(--secondary);
     outline-offset: 2px;
+}
+
+.social-icon {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+.social-btn.facebook::before, .social-links a[title="Facebook"]::before {
+    font-family: 'Font Awesome 6 Brands';
+    content: "\f09a";
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+.social-btn.instagram::before, .social-links a[title="Instagram"]::before {
+    font-family: 'Font Awesome 6 Brands';
+    content: "\f16d";
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+.social-btn .social-icon, .social-links .social-icon {
+    display: none;
 }
 
 .contact-form {
